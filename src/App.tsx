@@ -1,4 +1,9 @@
 import {Header} from "./sections/Header";
+import {AboutMe} from "./sections/aboutme/AboutMe";
+import {Education} from "./sections/Education";
+import {Projects} from "./sections/Projects";
+import {SkillSet} from "./sections/SkillSet";
+import {Contact} from "./sections/Contact";
 
 const App = () => {
 
@@ -6,8 +11,12 @@ const App = () => {
         <div tw={"flex justify-center mt-[200px]"}>
             <div tw={"flex-col w-[800px]"}>
                 <Header/>
-                <div tw={"flex flex-col w-full mt-[30px]"}>
-
+                <div tw={"flex flex-col justify-between w-full mt-[30px]"}>
+                    <AboutMe/>
+                    <Education/>
+                    <SkillSet/>
+                    <Projects/>
+                    <Contact/>
                 </div>
             </div>
         </div>
