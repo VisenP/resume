@@ -1,6 +1,6 @@
 import {Header} from "./sections/Header";
 import {AboutMe} from "./sections/aboutme/AboutMe";
-import {Education} from "./sections/Education";
+import {Education} from "./sections/education/Education";
 import {Projects} from "./sections/Projects";
 import {SkillSet} from "./sections/SkillSet";
 import {Contact} from "./sections/Contact";
