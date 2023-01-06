@@ -1,0 +1,56 @@
+{
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/jsx-runtime"
+  ],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "regex"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    // a simple rule checking for bigint n-notation and replacing it with a BigInt call
+    // needed for browser support or else vite will complain
+    //
+    // it would probably be better to eventually make or find a plugin for this
+    // that inspects the AST, but this is fine for now
+    "regex/invalid": [
+      "error", [{
+        "regex": "((?:\\d+_)*\\d+)n[;,)} ]",
+        "message": "use of bigint n-notation is forbidden",
+        "replacement": {
+          "function": "text.replace(captured[0] + 'n', `BigInt(${captured[0]})`)"
+        }
+      }]
+    ],
+    "radar/cognitive-complexity": "off",
+    "sonarjs/cognitive-complexity": "off",
+    "react/display-name": "off",
+    "react/prop-types": "off",
+    "react/button-has-type": "error",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/hook-use-state": "error",
+    "react/void-dom-elements-no-children": "error",
+    "react/jsx-boolean-value": ["error", "never"],
+    "react/jsx-fragments": ["error", "syntax"],
+    "react/jsx-indent": [
+      "error",
+      4,
+      {
+        "indentLogicalExpressions": true
+      }
+    ]
+  }
+}
