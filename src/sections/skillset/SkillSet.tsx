@@ -77,9 +77,7 @@ export const SkillSet = () => {
                         <AlignDiv>
                             <SizedLogo src={mySQLLogo}/>
                             <SkillItem>MySQL</SkillItem>
-                            <div tw={"flex justify-center"}>
-                                <SizedLogo src={scyllaLogo}/>
-                            </div>
+                            <SizedLogo src={scyllaLogo}/>
                             <SkillItem>Scylla</SkillItem>
                             <SizedLogo src={cassandraLogo}/>
                             <SkillItem>Cassandra</SkillItem>
