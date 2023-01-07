@@ -26,7 +26,7 @@ export const AboutMe = () => {
                 </TitledSection>
             </div>
         </div>
-        <LineDivider/>
+        <LineDivider tw={"mt-20 mb-10"}/>
         </>
     );
 }

@@ -1,5 +1,14 @@
+import React from "react";
+import styled from "styled-components";
+import tw from "twin.macro";
 
+type Props = {
+}
 
-export const LineDivider = () => {
-    return (<div tw={"border-gray-600 border-solid border-2 border-t-0 border-l-0 border-r-0 mt-20 mb-20"}></div>);
+const Line = styled.div`
+  ${tw`border-gray-500 border-solid border-[2px] w-full m-0 h-[1px] border-t-0 border-l-0 border-r-0`}
+`
+
+export const LineDivider: React.FC<Props> = ({...props}) => {
+    return (<Line {...props}></Line>);
 }
