@@ -2,7 +2,7 @@ import {SectionTitle} from "../../elements/SectionTitle";
 import {LineDivider} from "../../elements/LineDivider";
 import {Fire} from "../../icons/Fire";
 import {TitledSection} from "../../elements/TitiledSection";
-import styled, {StyledComponent} from "styled-components";
+import styled from "styled-components";
 
 import typeScriptLogo from "/assets/images/typescript_logo.png";
 import javaScriptLogo from "/assets/images/javascript_logo.png";
