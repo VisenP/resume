@@ -18,14 +18,24 @@ const ContactItem = styled.div`
 export const Contact = () => {
     return (
         <div>
-            <div tw={"w-full flex flex-col justify-start gap-y-[30px] h-[300px]"}>
+            <div tw={"w-full flex flex-col justify-start gap-y-[30px]"}>
                 <SectionTitle><ContactIcon/> Contact</SectionTitle>
-                <div tw={"grid grid-cols-2 gap-[5rem]"}>
-                    <ContactItem><SizedLogo src={emailLogo}/> visen@visen.dev</ContactItem>
-                    <ContactItem><SizedLogo src={discordLogo}/> Visen#3081</ContactItem>
-                    <ContactItem><SizedLogo src={linkedInLogo}/> /in/visenpavlica/</ContactItem>
-                    <ContactItem><SizedLogo src={twitterLogo}/> @NotVisen</ContactItem>
-                    <ContactItem><SizedLogo src={gitHubLogo}/> @VisenP</ContactItem>
+                <div tw={"grid grid-cols-2 gap-[2rem]"}>
+                    <ContactItem><SizedLogo src={emailLogo}/>
+                        <a href={"mailto: visen@visen.dev"}>visen@visen.dev</a>
+                    </ContactItem>
+                    <ContactItem><SizedLogo src={discordLogo}/>
+                        Visen#3081
+                    </ContactItem>
+                    <ContactItem><SizedLogo src={linkedInLogo}/>
+                        <a href={"https://linkedin.com/in/visenpavlica/"}>/in/visenpavlica/</a>
+                    </ContactItem>
+                    <ContactItem><SizedLogo src={twitterLogo}/>
+                        <a href={"https://twitter.com/NotVisen"}>@NotVisen</a>
+                    </ContactItem>
+                    <ContactItem><SizedLogo src={gitHubLogo}/>
+                        <a href={"https://github.com/VisenP"}>@VisenP</a>
+                    </ContactItem>
                 </div>
             </div>
             <LineDivider tw={"mt-20 mb-10"}/>
