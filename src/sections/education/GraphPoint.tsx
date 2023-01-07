@@ -4,6 +4,9 @@ import React, {useState} from "react";
 import { HoverSection } from "../../elements/HoverSection";
 import {LineDivider} from "../../elements/LineDivider";
 import {ProgressBar} from "../../elements/ProgressBar";
+import {BuildingSmall} from "../../icons/BuildingSmall";
+import {BuildingMedium} from "../../icons/BuildingMedium";
+import {BuildingLarge} from "../../icons/BuildingLarge";
 
 export const Point = styled.div<{ $color: string }>`
   ${tw`rounded-full`};
@@ -38,12 +41,27 @@ type Props = {
     status: "completed" | "active"
 };
 
+const OffsetDiv = styled.div<{ $offset: number }>`
+  position: absolute;
+  z-index: -1;
+  translate: -40% ${({$offset}) => -100 + $offset}%;
+`
+
+
+const icons = {
+    primary: <OffsetDiv $offset={20}><BuildingSmall/></OffsetDiv>,
+    secondary: <OffsetDiv $offset={0}><BuildingMedium/></OffsetDiv>,
+    higher: <OffsetDiv $offset={-5}><BuildingLarge/></OffsetDiv>
+}
+
 export const GraphPoint: React.FC<Props> = (props) => {
 
     const [hoverVisible, setHoverVisible] = useState(false);
 
     return (
         <div tw={"z-10"}>
+            <div>{icons[props.level]}</div>
+            <OffsetDiv $offset={250} tw={"text-neutral-300"}>{pointLabels[props.level]}</OffsetDiv>
             <HoverSection visible={hoverVisible}>
                 {props.known ? <div>
                     <div>{props.name}</div>
@@ -56,10 +74,12 @@ export const GraphPoint: React.FC<Props> = (props) => {
                     <ProgressBar percent={props.progress} tw={"mt-2 mb-2 w-full h-[5px]"}/>
                 </div> : <div>To be decided!</div>}
             </HoverSection>
+            <div tw={"z-20"}>
             <Point $color={props.known ? pointColors[props.status] : pointColors["unknown"]}
                    onMouseEnter={() => setHoverVisible(true)}
                    onMouseLeave={() => setHoverVisible(false)}
             />
+            </div>
         </div>
     )
 }

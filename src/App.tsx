@@ -11,7 +11,7 @@ const App = () => {
         <div tw={"flex justify-center mt-[200px]"}>
             <div tw={"flex-col w-[800px]"}>
                 <Header/>
-                <div tw={"flex flex-col justify-between w-full mt-[30px]"}>
+                <div tw={"flex flex-col justify-between w-full p-[1rem]"}>
                     <AboutMe/>
                     <Education/>
                     <SkillSet/>

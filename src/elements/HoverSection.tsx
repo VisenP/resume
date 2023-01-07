@@ -5,13 +5,12 @@ import styled from "styled-components";
 const Section = styled.div<{ $visible: boolean }>`
   position: absolute;
   display: flex;
-  padding: 0.5rem;
+  padding: 0.8rem;
   max-width: 180px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   border: 2px solid white;
-  padding: 0.5rem;
   border-radius: 8px;
   visibility: ${({ $visible}) => $visible ? `visible` : `hidden`};
   text-align: center;
