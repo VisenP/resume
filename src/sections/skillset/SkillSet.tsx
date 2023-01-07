@@ -29,7 +29,7 @@ type Props = {
     src: string
 }
 
-const SizedLogo: React.FC<Props> = ({src}) => {
+export const SizedLogo: React.FC<Props> = ({src}) => {
     return <div tw={"flex justify-center"}><SizedLogoImg src={src}/></div>
 }
 
