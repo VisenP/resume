@@ -8,7 +8,7 @@ import {LineDivider} from "../../elements/LineDivider";
 export const Education = () => {
     return (
         <div>
-            <div tw={"w-full flex flex-col justify-start gap-y-[30px] h-[300px]"}>
+            <div tw={"w-full flex flex-col justify-start gap-y-[40px]"}>
                 <SectionTitle><Book/> Education</SectionTitle>
                 <div tw={"flex w-full h-full justify-start p-[50px] items-center"}>
                     <GraphPoint
