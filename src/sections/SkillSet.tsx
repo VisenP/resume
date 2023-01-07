@@ -1,6 +1,0 @@
-
-
-export const SkillSet = () => {
-    return <>
-    </>
-}
