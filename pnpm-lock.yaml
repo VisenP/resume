@@ -62,7 +62,7 @@ dependencies:
   '@tanstack/react-query': 4.20.9_biqbaboplfbrettd7655fr4n2y
   axios: 0.27.2
   babel-plugin-macros: 3.1.0
-  babel-plugin-styled-components: 2.0.7_styled-elements@5.3.6
+  babel-plugin-styled-components: 2.0.7_styled-components@5.3.6
   babel-plugin-twin: 1.1.0
   chart.js: 3.9.1
   chartjs-adapter-date-fns: 2.0.1_chart.js@3.9.1
@@ -2645,7 +2645,7 @@ packages:
       '@emotion/is-prop-valid': 1.2.0
       '@emotion/stylis': 0.8.5
       '@emotion/unitless': 0.7.5
-      babel-plugin-styled-components: 2.0.7_styled-elements@5.3.6
+      babel-plugin-styled-components: 2.0.7_styled-components@5.3.6
       css-to-react-native: 3.0.0
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
