@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { FiCode, FiGithub, FiGlobe, FiUser, FiUsers } from "react-icons/fi";
 
-import { Project } from "../sections/ProjectsSection.tsx";
-import { LinkDisplay } from "./LinkDisplay.tsx";
+import { LinkDisplay } from "../../elements/LinkDisplay.tsx";
+import { Project } from "./ProjectsSection.tsx";
 
 type Properties = {
     project: Project;

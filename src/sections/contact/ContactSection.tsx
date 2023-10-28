@@ -3,8 +3,8 @@ import { IconType } from "react-icons";
 import { FaDiscord, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-import { LinkDisplay } from "../elements/LinkDisplay.tsx";
-import { SectionBox } from "../elements/SectionBox.tsx";
+import { LinkDisplay } from "../../elements/LinkDisplay.tsx";
+import { SectionBox } from "../../elements/SectionBox.tsx";
 
 type ContactInfo = {
     handle: string;
@@ -16,7 +16,7 @@ type ContactInfo = {
 const contact: ContactInfo[] = [
     {
         handle: "visen@visen.dev",
-        link: "to:visen@visen.dev",
+        link: "mailto:visen@visen.dev",
         service: "E-mail",
         icon: MdEmail,
     },

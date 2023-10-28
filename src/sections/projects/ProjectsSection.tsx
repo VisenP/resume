@@ -1,4 +1,5 @@
-import { ProjectDisplay } from "../elements/ProjectDisplay.tsx";
+import { LinkDisplay } from "../../elements/LinkDisplay.tsx";
+import { ProjectDisplay } from "./ProjectDisplay.tsx";
 
 type ProjectLang = "Typescript" | "Go";
 
@@ -14,7 +15,7 @@ export type Project = {
 const projectsSection: Project[] = [
     {
         name: "Kontestis",
-        description: "A full feature competetive programming platform",
+        description: "A full feature competitive programming platform",
         lang: "Typescript",
         site: "https://kontestis.ac",
         git: "ItKlubBozoLagan/kontestis",
@@ -53,6 +54,13 @@ export const ProjectsSections = () => {
                 {projectsSection.map((project) => (
                     <ProjectDisplay project={project} key={project.name} />
                 ))}
+            </div>
+            <div className={"flex gap-1.5 justify-center"}>
+                Check out more projects on my
+                <LinkDisplay
+                    link={"https://github.com/VisenP"}
+                    display={"Github"}
+                />
             </div>
         </div>
     );

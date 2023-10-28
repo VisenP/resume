@@ -3,9 +3,11 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 
-import { ContactSection } from "./sections/ContactSection.tsx";
-import { HeaderSection } from "./sections/IntroductionSection.tsx";
-import { ProjectsSections } from "./sections/ProjectsSection.tsx";
+import { AboutMeSection } from "./sections/aboutme/AboutMeSection.tsx";
+import { ContactSection } from "./sections/contact/ContactSection.tsx";
+import { HeaderSection } from "./sections/introduction/IntroductionSection.tsx";
+import { ProjectsSections } from "./sections/projects/ProjectsSection.tsx";
+import { SkillsSection } from "./sections/skills/SkillsSection.tsx";
 
 function App() {
     const [theme, setTheme] = useState(localStorage.theme ?? "light");
@@ -47,7 +49,9 @@ function App() {
                 </div>
 
                 <HeaderSection />
+                <AboutMeSection />
                 <ProjectsSections />
+                <SkillsSection />
                 <ContactSection />
             </div>
         </div>
