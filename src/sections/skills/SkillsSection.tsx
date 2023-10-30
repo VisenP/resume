@@ -1,24 +1,41 @@
 import { FC } from "react";
 import { IconType } from "react-icons";
-import { FaJava, FaPython } from "react-icons/fa";
+import { FaJava, FaPython, FaTerminal } from "react-icons/fa";
 import { FaGolang } from "react-icons/fa6";
 import { FiCode, FiDatabase, FiGitBranch, FiTool } from "react-icons/fi";
 import {
     SiDocker,
     SiGradle,
+    SiJavascript,
     SiMongodb,
     SiMysql,
+    SiRedis,
     SiScylladb,
     SiTypescript,
     SiYarn,
 } from "react-icons/si";
 
+import BashLogo from "../../assets/bash.svg";
+import DockerLogo from "../../assets/docker.webp";
+import GitLogo from "../../assets/git.webp";
+import GoLogo from "../../assets/golang.svg";
+import GradleLogo from "../../assets/gradle.svg";
+import JavaLogo from "../../assets/java.svg";
+import JavascriptLogo from "../../assets/javascript.webp";
+import MongoLogo from "../../assets/mongo.svg";
+import MySQLLogo from "../../assets/mysql.webp";
+import PythonLogo from "../../assets/python.webp";
+import RedisLogo from "../../assets/redis.svg";
+import ScyllaLogo from "../../assets/scylla.svg";
+import TypescriptLogo from "../../assets/typescript.webp";
+import YarnLogo from "../../assets/yarn.svg";
 import { SectionBox } from "../../elements/SectionBox.tsx";
 import { SkillBox } from "./SkillBox.tsx";
 
 type Skill = {
     name: string;
-    icon: IconType;
+    icon?: IconType;
+    image?: string;
 };
 
 export type SkillSection = {
@@ -33,20 +50,29 @@ const skillSections: SkillSection[] = [
         icon: FiCode,
         skills: [
             {
+                name: "Javascript",
+                icon: SiJavascript,
+                image: JavascriptLogo,
+            },
+            {
                 name: "Typescript",
                 icon: SiTypescript,
+                image: TypescriptLogo,
             },
             {
                 name: "Java",
                 icon: FaJava,
+                image: JavaLogo,
             },
             {
                 name: "Python",
                 icon: FaPython,
+                image: PythonLogo,
             },
             {
                 name: "GO",
                 icon: FaGolang,
+                image: GoLogo,
             },
         ],
     },
@@ -57,18 +83,27 @@ const skillSections: SkillSection[] = [
             {
                 name: "Git",
                 icon: FiGitBranch,
-            },
-            {
-                name: "Yarn",
-                icon: SiYarn,
-            },
-            {
-                name: "Gradle",
-                icon: SiGradle,
+                image: GitLogo,
             },
             {
                 name: "Docker",
                 icon: SiDocker,
+                image: DockerLogo,
+            },
+            {
+                name: "Bash",
+                icon: FaTerminal,
+                image: BashLogo,
+            },
+            {
+                name: "Gradle",
+                icon: SiGradle,
+                image: GradleLogo,
+            },
+            {
+                name: "Yarn",
+                icon: SiYarn,
+                image: YarnLogo,
             },
         ],
     },
@@ -79,14 +114,22 @@ const skillSections: SkillSection[] = [
             {
                 name: "MySQL",
                 icon: SiMysql,
+                image: MySQLLogo,
             },
             {
                 name: "Scylla",
                 icon: SiScylladb,
+                image: ScyllaLogo,
+            },
+            {
+                name: "Redis",
+                icon: SiRedis,
+                image: RedisLogo,
             },
             {
                 name: "Mongo",
                 icon: SiMongodb,
+                image: MongoLogo,
             },
         ],
     },

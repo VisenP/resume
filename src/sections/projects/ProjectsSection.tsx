@@ -1,4 +1,5 @@
 import { LinkDisplay } from "../../elements/LinkDisplay.tsx";
+import { SectionBox } from "../../elements/SectionBox.tsx";
 import { ProjectDisplay } from "./ProjectDisplay.tsx";
 
 type ProjectLang = "Typescript" | "Go";
@@ -40,11 +41,7 @@ const projectsSection: Project[] = [
 
 export const ProjectsSections = () => {
     return (
-        <div
-            className={
-                "w-full flex flex-col justify-start rounded-xl bg-neutral-100 dark:bg-neutral-800 p-4 gap-5"
-            }
-        >
+        <SectionBox>
             <div className={"text-3xl font-bold w-fit"}>Projects</div>
             <div
                 className={
@@ -62,6 +59,6 @@ export const ProjectsSections = () => {
                     display={"Github"}
                 />
             </div>
-        </div>
+        </SectionBox>
     );
 };

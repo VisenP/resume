@@ -12,7 +12,7 @@ export const ProjectDisplay: FC<Properties> = ({ project }) => {
     return (
         <div
             className={
-                "w-full flex flex-col shadow transition-all hover:shadow-xl hover:-translate-y-1 bg-slate-50 dark:bg-neutral-900 hover:bg-amber-50 hover:dark:bg-amber-950 hover:transition-all ease-linear rounded-2xl gap-5 p-2 px-4"
+                "w-full flex flex-col shadow transition-all hover:shadow-xl hover:-translate-y-1 bg-slate-50 hover:bg-gradient-to-br from-slate-50 to-amber-50 dark:bg-neutral-900 dark:from-neutral-900 dark:to-amber-950 hover:transition-all ease-linear rounded-2xl gap-5 p-2 px-4"
             }
         >
             <div
