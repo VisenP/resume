@@ -23,7 +23,7 @@ function App() {
         <div className={theme}>
             <div
                 className={
-                    "flex p-10 flex-col self-center gap-10 bg-gradient-to-b from-neutral-100 via-blue-50 to-neutral-200 dark:bg-neutral-800 dark:from-neutral-800 dark:to-neutral-900 text-amber-600 rounded-xl w-full h-full max-w-[1200px]"
+                    "flex py-10 px-4 md:p-10 flex-col self-center gap-10 bg-gradient-to-b from-neutral-100 via-blue-50 to-neutral-200 dark:bg-neutral-800 dark:from-neutral-800 dark:to-neutral-900 text-amber-600 rounded-xl w-full h-full max-w-[1200px]"
                 }
             >
                 <div
