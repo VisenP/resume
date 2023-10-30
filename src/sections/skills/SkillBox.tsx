@@ -9,7 +9,7 @@ type Properties = {
 export const SkillBox: FC<Properties> = ({ section }) => {
     const SkillIcon = section.icon;
 
-    const [d, setD] = useState(false);
+    const [displayImage, setDisplayImage] = useState(true);
 
     return (
         <div
@@ -20,7 +20,7 @@ export const SkillBox: FC<Properties> = ({ section }) => {
             {SkillIcon && (
                 <div
                     className={"absolute self-start m-1 text-xl"}
-                    onClick={() => setD(!d)}
+                    onClick={() => setDisplayImage(!displayImage)}
                 >
                     <SkillIcon />
                 </div>
@@ -40,7 +40,7 @@ export const SkillBox: FC<Properties> = ({ section }) => {
                             }
                         >
                             <div>
-                                {d && (
+                                {displayImage && (
                                     <img
                                         src={skill.image}
                                         className={
@@ -49,7 +49,7 @@ export const SkillBox: FC<Properties> = ({ section }) => {
                                         alt={""}
                                     ></img>
                                 )}
-                                {!d && Icon && <Icon />}
+                                {!displayImage && Icon && <Icon />}
                             </div>
                             <div
                                 className={

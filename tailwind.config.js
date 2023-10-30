@@ -9,6 +9,9 @@ export default {
     darkMode: "class",
     theme: {
         extend: {
+            placeSelf: {
+                "start-end": "start end",
+            },
             colors: {
                 veryDark: "#080808",
                 background: "#111111",

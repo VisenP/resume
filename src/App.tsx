@@ -5,6 +5,7 @@ import { FiMoon, FiSun } from "react-icons/fi";
 
 import { AboutMeSection } from "./sections/aboutme/AboutMeSection.tsx";
 import { ContactSection } from "./sections/contact/ContactSection.tsx";
+import { EducationSection } from "./sections/education/EducationSection.tsx";
 import { HeaderSection } from "./sections/introduction/IntroductionSection.tsx";
 import { ProjectsSections } from "./sections/projects/ProjectsSection.tsx";
 import { SkillsSection } from "./sections/skills/SkillsSection.tsx";
@@ -52,6 +53,7 @@ function App() {
                 <AboutMeSection />
                 <ProjectsSections />
                 <SkillsSection />
+                <EducationSection />
                 <ContactSection />
             </div>
         </div>

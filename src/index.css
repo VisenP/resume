@@ -17,6 +17,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
+@screen md {
+  .custom-place-self {
+    place-self: start end;
+  }
+}
+
 a {
   font-weight: 500;
   color: #646cff;
