@@ -21,40 +21,42 @@ function App() {
 
     return (
         <div className={theme}>
-            <div
-                className={
-                    "flex py-10 px-4 md:p-10 flex-col self-center gap-10 bg-gradient-to-b from-neutral-100 via-blue-50 to-neutral-200 dark:bg-neutral-800 dark:from-neutral-800 dark:to-neutral-900 text-amber-600 rounded-xl w-full h-full max-w-[1200px]"
-                }
-            >
+            <div className={"md:m-10"}>
                 <div
                     className={
-                        "lg:absolute lg:self-start self-center flex gap-2 text-3xl p-1 hover:cursor-pointer hover:text-amber-700 transition-all ease-linear"
+                        "flex py-10 px-4 md:p-10 flex-col self-center gap-10 bg-gradient-to-b from-neutral-100 via-blue-50 to-neutral-200 dark:bg-neutral-800 dark:from-neutral-800 dark:to-neutral-900 text-amber-600 rounded-xl w-full h-full max-w-[1200px]"
                     }
                 >
                     <div
                         className={
-                            theme === "dark"
-                                ? "text-neutral-700 "
-                                : "text-yellow-600"
+                            "lg:absolute lg:self-start self-center flex gap-2 text-3xl p-1 hover:cursor-pointer hover:text-amber-700 transition-all ease-linear"
                         }
-                        onClick={() => setTheme("light")}
                     >
-                        <FiSun />
+                        <div
+                            className={
+                                theme === "dark"
+                                    ? "text-neutral-700 "
+                                    : "text-yellow-600"
+                            }
+                            onClick={() => setTheme("light")}
+                        >
+                            <FiSun />
+                        </div>
+                        <div
+                            className={"text-slate-300"}
+                            onClick={() => setTheme("dark")}
+                        >
+                            <FiMoon />
+                        </div>
                     </div>
-                    <div
-                        className={"text-slate-300"}
-                        onClick={() => setTheme("dark")}
-                    >
-                        <FiMoon />
-                    </div>
-                </div>
 
-                <HeaderSection />
-                <AboutMeSection />
-                <ProjectsSections />
-                <SkillsSection />
-                <EducationSection />
-                <ContactSection />
+                    <HeaderSection />
+                    <AboutMeSection />
+                    <ProjectsSections />
+                    <SkillsSection />
+                    <EducationSection />
+                    <ContactSection />
+                </div>
             </div>
         </div>
     );
