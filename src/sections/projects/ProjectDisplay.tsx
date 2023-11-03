@@ -35,7 +35,7 @@ export const ProjectDisplay: FC<Properties> = ({ project }) => {
                     {project.git && (
                         <LinkDisplay
                             icon={FiGithub}
-                            link={"https://github.com"}
+                            link={"https://github.com/" + project.git}
                             display={project.git}
                         />
                     )}
@@ -47,11 +47,7 @@ export const ProjectDisplay: FC<Properties> = ({ project }) => {
                         />
                     )}
                     {project.lang && (
-                        <LinkDisplay
-                            link={"a"}
-                            display={project.lang}
-                            icon={FiCode}
-                        />
+                        <LinkDisplay display={project.lang} icon={FiCode} />
                     )}
                 </div>
             )}
